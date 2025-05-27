@@ -1,0 +1,349 @@
+Web Developer Intern Take-Home Assignment
+Organization: English Learning Hub
+Role: Web Developer Intern
+Time to Complete: 42 hours
+Objective:
+Demonstrate your ability to build a simple, responsive, user-friendly landing page with interactive
+elements inspired by real-world design (e.g., Vee’s Experience at https://veesexperience.com/) tailored
+to an educational setting.
+
+Scenario:
+You are part of a team building a new web-based learning portal called "WordWise" — a platform for
+helping learners master English vocabulary through daily tips, quizzes, and interactive lessons. The
+product is in pre-launch, and we want to display a "Coming Soon" landing page for WordWise to:
+- Generate excitement
+- Collect emails for early access
+- Share a brief about the platform
+- Include social media links
+
+Assignment Task:
+Build a single-page responsive landing page for "WordWise" that includes the following:
+Required Sections:
+1. Hero Section
+- Headline: “Learn English Smarter”
+- Subheadline: “WordWise is launching soon – sign up to be the first to know.”
+- Call-to-Action Button: “Notify Me”
+- Logo placeholder (you can use a simple text logo)
+2. About Section
+- A short description (3–4 lines) about WordWise. Use this:
+```
+WordWise is an upcoming web and mobile app that helps learners improve their English vocabulary
+through daily challenges, flashcards, quizzes, and real-life usage examples. Designed for all levels,
+from beginners to advanced.
+```
+3. Contact / Notification Form
+- Name
+- Email
+- Message (optional)
+- Submit button (no back-end needed; just use a JavaScript alert on submission)
+4. Social Media Section
+- Include icons for Facebook, Instagram, and LinkedIn (you can use Font Awesome or image icons)
+- Dummy links are fine
+5. Mobile Responsiveness
+- The design should be usable and visually pleasing on both desktop and mobile devices.
+Bonus (Optional):
+- Add a preloader or scroll animation
+- Add a modal for the “Notify Me” button instead of a direct form on the page
+- Add Google Fonts and use a clean, readable font
+- Use custom CSS transitions or animations (e.g., fading in content on scroll)
+Submission Guidelines:
+- Submit a zipped folder with:
+- `index.html`
+- `styles.css`
+- `script.js`
+- `mail.php` (for handling form submissions)
+- A `README.md` with instructions on how to view the project
+- (Optional) Any images or assets used
+- No back-end is required — just make sure the HTML, CSS, and JS are clean and functional.
+Evaluation Criteria:
+Criteria Weight
+Clean and semantic HTML 20%
+Responsive design with CSS 20%
+Functionality of form 15%
+Design and layout 20%
+Code structure & readability 15%
+Bonus features 10%
+Tips:
+- Focus on structure, layout, and attention to detail.
+- You’re welcome to use Bootstrap or build with pure CSS.
+- Use placeholder links or images where necessary.
+- Be creative, but prioritize usability and readability.
+Deliverables:
+Submit your zipped folder or GitHub repository link to: `gatewayenglishlearningapp@gmail.com` by
+Wednesday, 9pm. (May 28, 2025) (If you require more time, kindly let’s know).
+Sample Mockup and Starter Code (This is just a guide)
+Project Structure:
+- `index.html` (Main HTML file)
+- `styles.css` (CSS styles)
+- `script.js` (JavaScript for form submission)
+- `mail.php` (PHP script for handling form submissions)
+1. index.html
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>WordWise - Coming Soon</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+rel="stylesheet">
+<!-- Font Awesome (For social media icons) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+rel="stylesheet">
+</head>
+<body>
+<!-- Hero Section -->
+<section class="hero">
+<div class="hero-content">
+<img src="logo.png" alt="WordWise Logo" class="logo">
+<h1>Learn English Smarter</h1>
+<p>WordWise is launching soon – sign up to be the first to know.</p>
+<button class="cta-btn" data-toggle="modal" data-target="modal-notify">Notify Me</button>
+</div>
+</section>
+<!-- About Section -->
+<section class="about">
+<div class="container">
+<h2>About WordWise</h2>
+<p>WordWise is an upcoming web and mobile app that helps learners improve their English
+vocabulary through daily challenges, flashcards, quizzes, and real-life usage examples. Designed for all
+levels, from beginners to advanced.</p>
+</div>
+</section>
+<!-- Contact Form (Modal) -->
+<div id="modal-notify" class="modal">
+<div class="modal-content">
+<button class="close-btn" onclick="closeModal()">×</button>
+<h3>Stay Tuned</h3>
+<form id="notify-form" action="mail.php" method="post">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" placeholder="Your Message (Optional)"></textarea>
+<button type="submit">Send</button>
+</form>
+</div>
+</div>
+<!-- Social Media Section -->
+<section class="social-media">
+<div class="container">
+<a href="" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+</div>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
+```
+2. styles.css
+```css
+/ Global Styles /
+body {
+font-family: 'Poppins', sans-serif;
+margin: 0;
+padding: 0;
+background-color: f4f4f4;
+color: 333;
+}
+.container {
+width: 90%;
+margin: 0 auto;
+}
+h1, h2, p {
+margin: 0 0 20px;
+}
+a {
+text-decoration: none;
+color: inherit;
+}
+/ Hero Section /
+.hero {
+background: 2d3e50;
+color: white;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+.hero-content {
+max-width: 600px;
+}
+.hero h1 {
+font-size: 3rem;
+}
+.hero p {
+font-size: 1.2rem;
+margin-bottom: 30px;
+}
+.cta-btn {
+background-color: 00bfae;
+padding: 15px 25px;
+border: none;
+color: white;
+font-size: 1.1rem;
+cursor: pointer;
+border-radius: 5px;
+}
+.cta-btn:hover {
+background-color: 019a8d;
+}
+/ About Section /
+.about {
+padding: 60px 0;
+background-color: ffffff;
+}
+.about h2 {
+font-size: 2rem;
+color: 2d3e50;
+}
+.about p {
+font-size: 1.1rem;
+color: 555;
+}
+/ Modal /
+.modal {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7);
+justify-content: center;
+align-items: center;
+}
+.modal-content {
+background: fff;
+padding: 40px;
+width: 400px;
+text-align: center;
+border-radius: 8px;
+}
+.modal input, .modal textarea, .modal button {
+width: 100%;
+margin: 10px 0;
+padding: 10px;
+font-size: 1rem;
+}
+.close-btn {
+font-size: 1.5rem;
+color: 333;
+background: none;
+border: none;
+cursor: pointer;
+}
+.close-btn:hover {
+color: ff5733;
+}
+/ Social Media Section /
+.social-media {
+background-color: 2d3e50;
+padding: 30px 0;
+text-align: center;
+}
+.social-icon {
+font-size: 2rem;
+margin: 0 15px;
+color: white;
+}
+.social-icon:hover {
+color: 00bfae;
+}
+```
+3. script.js
+```javascript
+// Function to open modal
+function openModal() {
+document.getElementById('modal-notify').style.display = 'flex';
+}
+// Function to close modal
+function closeModal() {
+document.getElementById('modal-notify').style.display = 'none';
+}
+// Function to handle form submission
+function submitForm(event) {
+event.preventDefault(); // Prevent form submission
+// Extract form data
+const name = event.target.name.value;
+const email = event.target.email.value;
+const message = event.target.message.value;
+// Show alert (for demonstration purposes, no back-end logic)
+alert(`Thank you for subscribing, ${name}! We will notify you at ${email}.`);
+// Close the modal after submission
+closeModal();
+// Clear the form
+event.target.reset();
+}
+```
+4. mail.php
+```php
+<?php
+require(__DIR__ . '/../inc/PHPMailer/src/Exception.php');
+require(__DIR__ . '/../inc/PHPMailer/src/PHPMailer.php');
+require(__DIR__ . '/../inc/PHPMailer/src/SMTP.php');
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+date_default_timezone_set("Asia/Kolkata");
+function send_mail($uemail, $subject, $body) {
+$mail = new PHPMailer(true);
+try {
+// Server settings
+$mail->isSMTP();
+$mail->Host = 'mail.domain.com';
+$mail->SMTPAuth = true;
+$mail->Username = 'support@domain.com';
+$mail->Password = 'Workingjdbfjs%hcfbjPassq4';
+$mail->SMTPSecure = 'ssl';
+$mail->Port = 465;
+// Recipients
+$mail->setFrom('support@domain.com', 'InternWebsite');
+$mail->addAddress($uemail); // Recipient's email
+// Content
+$mail->isHTML(true);
+$mail->Subject = $subject;
+$mail->Body = $body;
+$mail->send();
+return 1;
+} catch (Exception $e) {
+// Log the error if needed: $e->getMessage()
+return 0;
+}
+}
+// Handle form submission
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+$name = $_POST['name'];
+$email = $_POST['email'];
+$message = $_POST['message'];
+$subject = "New Subscription from WordWise";
+$body = "Name: $name\nEmail: $email\nMessage: $message";
+if (send_mail("admin@wordwise.com", $subject, $body)) {
+echo "Thank you for subscribing! We will notify you soon.";
+} else {
+echo "There was an error. Please try again later.";
+}
+}
+?>
+```
+How to Use This Template:
+1. Files: Create the four files (`index.html`, `styles.css`, `script.js`, `mail.php`) in a project folder.
+2. Images/Assets: Place your `logo.png`, and any icons/images (such as social media icons) in the same
+folder, or adjust the paths as necessary.
+3. Form Handling: The form currently just shows an alert upon submission. In a real-world scenario,
+you'd replace this with an actual back-end process (like sending an email or saving to a database).
+4. Customizations: Feel free to modify the content, colors, fonts, or add additional sections.
+5. Make it mobile-friendly
+How the Evaluation Will Be Done:
+- HTML: Your structure should be semantic and well-organized.
+- CSS: The page must be responsive, with a clear, professional, and modern design.
+- JavaScript: Functional form handling (without actual back-end) will be evaluated.
+- PHP: Ensure the form submission is handled correctly using the provided PHP script.
+- Creativity: Bonus points for any extra features, like animations, a smooth scrolling effect, or using
+more advanced CSS techniques.
+Feel free to modify the design, add extra elements, or get creative with animations or interactivity. This
+starter code should provide a solid foundation for the landing page you're building for WordWise.
+Good luck with your internship application! Let me know if you need further assistance!
