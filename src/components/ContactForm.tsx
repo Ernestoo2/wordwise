@@ -28,7 +28,7 @@ export default function ContactForm({ onClose, isModal = false }: ContactFormPro
   }
 
   const formContent = (
-    <div className={`${isModal ? 'bg-white rounded-lg p-8 max-w-md w-full' : 'w-full'}`}>
+    <div className={`${isModal ? 'bg-gray-100 text-black rounded-lg p-8 max-w-md w-full' : 'w-full'}`}>
       {isModal && (
         <button 
           onClick={onClose}
@@ -76,7 +76,7 @@ export default function ContactForm({ onClose, isModal = false }: ContactFormPro
 
   if (isModal) {
     return (
-      <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4">
+      <div className="fixed inset-0  bg-transparent  flex items-center justify-center p-4">
         {formContent}
       </div>
     )

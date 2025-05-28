@@ -35,7 +35,7 @@ Before you begin, ensure you have the following installed:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/wordwise.git
+   git clone https://github.com/Ernestoo2/wordwise.git
    cd wordwise
    ```
 
@@ -151,7 +151,7 @@ This project is created for the English Learning Hub Web Developer Intern positi
 ## 👥 Author
 
 [Your Name]
-- GitHub: [@yourusername](https://github.com/yourusername)
+- GitHub: [@Ernestoo2 ](https://github.com/Ernestoo2/wordwise.git)
 - LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourusername)
 
 ## 📧 Contact
